@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker with JavaScript</title>
+    <link rel="stylesheet" href="colorjoe/colorjoe.css">
+    <link rel="stylesheet" href="colorjoe/style.css">
+    <link rel="stylesheet" href="colorjoe/toggle.css">
+    <script src="colorjoe/colorjoe.min.js"></script>
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, orientation=landscape">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="colorjoe"></div>
+        <div class="config">
+            
+            <div class="selected-color-text"></div>
+            <div class="selected-color-text-rgb">rgb(255,255,255)</div>
+            <div class="selected-color"></div>
+           
+        </div>
+    </div>
+    <div class="buttons">
+        <label>
+            <input type="submit" name="check" id="redPwr" class="commCheck" onclick="redPwr()">
+              <span></span>
+              <i class="fa-solid fa-lightbulb"></i>
+            </input>
+          </label>
+    
+          <label>
+            <input type="submit" name="check" id="greenPwr"  class="commCheck" onclick="greenPwr()">
+              <span></span>
+              <i class="fa-solid fa-lightbulb"></i>
+            </input>
+          </label>
+
+          <label>
+            <input type="submit" name="check" id="bluePwr" class="commCheck" onclick="bluePwr()">
+              <span></span>
+              <i class="fa-solid fa-lightbulb"></i>
+            </input>
+          </label>
+
+          <label>
+            <input type="submit" name="check" id="whitePwr" class="commCheck" onclick="whitePwr()">
+              <span></span>
+              <i class="fa-solid fa-lightbulb"></i>
+            </input>
+          </label>
+
+
+        </div>
+
+        <div class = 'toggle-switch'>
+          <label>
+              <input type = 'checkbox' id="toggle_PWR">
+              <span class = 'slider'></span>
+          </label>
+         
+      </div>
+
+     
+<p class="render_prog"><i class="fa-solid fa-spinner fa-spin" id="status_render"></i></p>
+<p class="render_done"><i class="fa-solid fa-check fa-fade" id="status_done"></i></p>
+<i class="fa-solid fa-exclamation fa-bounce" style="color: #ff0000;" id="status_error"></i>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script  src="colorjoe/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Prompt:wght@300&family=Reenie+Beanie&family=Silkscreen&family=VT323&family=Zeyada&display=swap');
+:root
+{
+    --height-colorpick : 310px;
+    --width-colorpick : 310px;
+
+    --light: #0dffd7;
+    --dark: #28292c;
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+}
+*
+{
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+    background: #111;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.colorPicker {
+    position: relative; 
+    background: transparent;
+    border: none;
+    margin: 0;
+    height: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: all;
+}
+.colorPicker .twod
+{
+    transform-origin: center;
+    height: var(--height-colorpick);
+    width: var(--width-colorpick);
+    position: relative;
+    left: -5%;
+    
+}
+.colorPicker .twod .bg.bg1,
+.colorPicker .twod .bg.bg2
+{
+    height: var(--height-colorpick);
+    width: var(--width-colorpick);
+}
+.colorPicker .twod .pointer .shape.shape1
+{
+    transform: scale(0);
+}
+.colorPicker .twod .pointer .shape.shape2
+{
+    border: 2px solid #ffc;
+}
+.colorPicker .oned .pointer .shape
+{
+    border: 2px solid #222;
+}
+.colorPicker .oned {
+    margin-right: 0;
+    position: absolute;
+    left: 300px;
+    top: 0px;
+    height: 307px;
+    border-radius: 10px;
+    border: none;
+
+}
+.colorPicker .oned .bg
+{
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 500px;
+    width: 500px;
+    padding: 0px;
+    padding-top: 15px;
+    background: #222;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);   
+}
+
+.config {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+
+.selected-color-text {
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    font-family: 'Gugi', cursive;
+    color: #ffc;
+    letter-spacing: 2px;
+    position: relative;
+    top: 75%;
+    left: -370px;
+}
+
+.selected-color {
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    top: 60%;
+    width: 340px;
+    left: -79%;
+}
+
+.selected-color-text-rgb
+{
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    font-family: 'Gugi', cursive;
+    color: rgb(216, 216, 3);
+    letter-spacing: 2px;
+    position: absolute;
+    top: 75%;
+    left: 63%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+.buttons
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 350px;
+  gap: 20px;
+  position: absolute;
+  width: 350px;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  outline: none;
+}
+
+.buttons:active {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.buttons label
+{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  
+}
+
+.buttons label input 
+{
+  appearance: none;  
+  background: none;
+  border: none;
+  outline: none;
+}
+
+
+.commCheck:hover + span
+{
+  box-shadow: inset 0 2px 2px rgba(0,0,0,0.35),
+  inset 0 5px 5px rgba(0,0,0,0.5),
+  inset 0 15px 25px rgba(0,0,0,0.35);
+}
+
+
+.buttons label span
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#555353, #363535, #303030);
+  border: 2px solid #222;
+  border-radius: 6px;
+  box-shadow: inset 0 5px 1px rgba(0,0,0,0,.35),
+  0 5px 5px rgba(0,0,0,0,0,.5),
+  0 15px 25px rgba(0,0,0,.35);
+  transition: 0.15s;
+}
+
+.buttons label span::before
+{
+  content: '';
+  position: absolute;
+  inset: 5px 3px;
+  border-top: 1px solid #ccc;
+  filter: blur(2px);
+  cursor: pointer;
+}
+
+.buttons label i
+{
+  position: relative;
+  z-index: 10;
+  font-size: 1.5em;
+  color: #111;
+  transition: 0.25s;
+  justify-content: center;
+  align-items: center;
+  left: -40%;
+}
+#greenPwr + span + i
+{
+    color: #00ff4c56;
+}
+#redPwr + span + i
+{
+    color: #f7181894;
+}
+#bluePwr + span + i
+{
+    color: #7b96ec94;
+}
+
+#whitePwr + span + i
+{
+    color: #ffffff94;
+}
+
+#greenPwr:active + span + i,
+#greenPwr:focus + span + i
+{
+  color: #fff;
+  text-shadow:  0 0 5px #00ff4c,
+  0 0 8px #219cf3;
+}
+
+#redPwr:active + span + i,
+#redPwr:focus + span + i
+{
+  color: #fff;
+  text-shadow:  0 0 5px #f71818,
+  0 0 8px #219cf3;
+}
+
+#bluePwr:active + span + i,
+#bluePwr:focus + span + i
+{
+  color: #fff;
+  text-shadow:  0 0 5px #0b42f8,
+  0 0 8px #219cf3;
+}
+
+#whitePwr:active + span + i,
+#whitePwr:focus + span + i
+{
+  color: #fff;
+  text-shadow:  0 0 5px #ffffff,
+  0 0 8px #219cf3;
+}
+
+
+#status_render
+{
+  position: absolute;
+  left: 10px;
+  top: 24px;
+  color: #ffc;
+  display: none;
+}
+#status_done
+{
+  position: absolute;
+  left: 10px;
+  top: 24px;
+  color: rgb(5, 235, 74);
+  display: none;
+}
+
+#status_error
+{
+  position: absolute;
+  left: 10px;
+  top: 24px;
+  color: rgb(235, 22, 22);
+  display: none;
+}
