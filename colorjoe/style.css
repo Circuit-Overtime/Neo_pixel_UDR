@@ -298,3 +298,39 @@ body {
   color: rgb(235, 22, 22);
   display: none;
 }
+
+
+.logo_name
+{
+  text-align: center;
+    font-family: monospace;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    font-family: 'monospace';
+    color: rgb(216, 216, 3);
+    letter-spacing: 2px;
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    pointer-events: none;
+    z-index: 100;
+    
+}
+
+.dec
+{
+  text-align: center;
+  font-family: monospace;
+  font-size: 10px;
+  margin-bottom: 15px;
+  font-family: 'calibri', cursive;
+  color: #ffc;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 96%;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 100;
+  
+}
