@@ -32,8 +32,8 @@ class ColorPicker {
         
 
         this.colorjoe.show();
-        this.setSelectedColor("#00952d"); // 000000 10010101 00101101 
-        this.root.querySelector(".selected-color-text-rgb").textContent = "rgb("+"00" + "," + "149" + "," + "45"+")";
+        this.setSelectedColor("#00def7"); // 000000 10010101 00101101 
+        this.root.querySelector(".selected-color-text-rgb").textContent = "rgb("+"0" + "," + "222" + "," + "247"+")";
         this.colorjoe.on("change", color => {
            var  hex = String(color.hex())
             var hex_red = parseInt(hex.slice(1,3), 16)
